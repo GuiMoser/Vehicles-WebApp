@@ -28,7 +28,7 @@ if scatter_button:
     st.plotly_chart(fig2, use_container_width=True)
 
 check_types = df['type'].unique().tolist()
-selected_types = st.sidebar.checkbox('Selecione o tipo de carro para criar um histograma.', check_types)
+selected_types = [type for type in check_types if st.sidebar.checkbox(type)]
 df_types = df[df['type'].isin(selected_types)]
 
 if selected_types:
@@ -36,4 +36,3 @@ if selected_types:
     st.plotly_chart(fig, use_container_width=True)
 else:
     st.write('Por favor, selecione um tipo de carro.')
-
