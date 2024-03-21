@@ -9,7 +9,7 @@ st.title("Vehicles Data Explorer")
 hist_button = st.button('Criar um Histograma')
 
 if hist_button:
-    st.write('Criando um histograma de preços por tipos.')
+    st.write('Histograma de preços por tipos.')
     # Criando um histograma com plotly.express para analisar o preco pelos tipos dos carros.
     fig1 = px.histogram(df, x='price', color='type', nbins=40, title='Prices by Types',
                    color_discrete_map={'SUV': 'green', 'truck': 'red', 'sedan': 'deepskyblue', 'pickup': 'yellow', 'coupe': 'chocolate', 
@@ -20,7 +20,7 @@ if hist_button:
 scatter_button = st.button('Criar um Gráfico de Dispersão')
 
 if scatter_button:
-    st.write('Criando um gráfico de dispersão de kilometragem por ano do modelo.')
+    st.write('Gráfico de dispersão de kilometragem por ano do modelo.')
     # Criando um gráfico de dispersão para analisar a kilometragem e a condicão por ano de modelo.
     fig2 = px.scatter(df, x='model_year', y='odometer', title='Odometer by Model Year', color='condition', 
                  color_discrete_map={'good': 'green', 'like new': 'deepskyblue', 'fair': 'crimson', 'excellent': 'goldenrod', 
@@ -35,4 +35,4 @@ if selected_types:
     fig = px.histogram(df_types, x='type', title='Quantidade de Carros por Tipo')
     st.plotly_chart(fig, use_container_width=True)
 else:
-    st.write('Por favor, selecione um tipo de carro.')
+    st.write('Selecione um tipo de carro na barra a esquerda para gerar uma contagem.')
