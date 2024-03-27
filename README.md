@@ -1,8 +1,6 @@
-# web_app
-Projeto 5 TripleTen
 
-===============================
-### Descrição do projeto:
-Esse projeto consiste em um web app com o intuito de analisar os dados de um dataframe de vendas de carros, utilizando-se de uma sidebar com checkbox para gerar histogramas.
+Using a dataframe of cars for sale, the notebook does a brief EDA so we can create a Web App.
 
-URL do Render: https://web-app-hu1b.onrender.com
+This project consists of a Web App with the aim of analyzing data from the car sales dataframe, using interactive graphs and a sidebar with a checkbox to generate histograms.
+
+Render URL: https://web-app-hu1b.onrender.com
